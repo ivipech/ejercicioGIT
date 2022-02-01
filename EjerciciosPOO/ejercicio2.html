@@ -1,0 +1,66 @@
+<script>
+  console.log("ORDENADOR DE NUMEROS DE MAYOR A MENOR");
+
+  //Arreglos prueba
+
+  const arr = [5, 4, true, 3, 6, false, 1, 7, 2, "holi", 90];
+  const arrP = ["una cadena", 3, 9, 1, 10, 500, 1, 10, true];
+
+  //Funcion para dejar arreglos con numeros unicamente
+  function soloNumeros(arr) {
+    const arr1 = [];
+    for (let i in arr) {
+      if (typeof arr[i] === "number") {
+        arr1.push(arr[i]);
+      }
+    }
+    return arr1;
+  }
+
+  //Funcion para ordenar numeros usando For y un contador
+  function OrdenarNumerosFor(arr) {
+    let contador = 0;
+    const arr2 = soloNumeros(arr);
+
+    for (i = 0; i < arr2.length - 1; i++) {
+      if (arr2[i] < arr2[i + 1]) {
+        [arr2[i], arr2[i + 1]] = [arr2[i + 1], arr2[i]]; // Si es mayor s eintercambian de lugar
+      }
+      if (i === arr2.length - 2) {
+        i = -1;
+        contador++;
+      }
+
+      if (contador === arr2.length - 1) break;
+    }
+    console.log(`Recibi el arreglo: ${arr}`);
+    console.log(`Devuelvo el siguiente arreglo ${arr2}`);
+  }
+
+  //Funcion para ordenar numeros usando while y sin contador
+
+  function OrdenarNumerosWhile(arr) {
+    const arr2 = soloNumeros(arr);
+    let j = 0;
+    let cambio = false;
+    while (j < arr2.length - 1) {
+      if (arr2[j] < arr2[j + 1]) {
+        [arr2[j], arr2[j + 1]] = [arr2[j + 1], arr2[j]]; //switch
+        cambio = true;
+      }
+      if (j === arr2.length - 2) {
+        j = -1;
+        if (cambio === false) break;
+        cambio = false;
+      }
+      j++;
+    }
+    console.log(`Recibi el arreglo: ${arr}`);
+    console.log(`Devuelvo el siguiente arreglo ${arr2}`);
+  }
+
+  //Probar las funciones con los arreglos prueba.
+
+  OrdenarNumerosFor(arr);
+  OrdenarNumerosWhile(arrP);
+</script>

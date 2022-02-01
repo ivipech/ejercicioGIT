@@ -1,0 +1,16 @@
+<script>
+  console.log("Fibonacci");
+  console.log("");
+
+  const numeroDeElementos = 13;
+
+  function Fibonacci(numeroDeElementos) {
+    const arrFibo = [0, 1];
+    for (i = 2; i < numeroDeElementos; i++) {
+      arrFibo[i] = arrFibo[i - 1] + arrFibo[i - 2];
+    }
+    return arrFibo;
+  }
+
+  console.log(Fibonacci(numeroDeElementos));
+</script>
