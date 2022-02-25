@@ -88,7 +88,7 @@
 
   //5.2
   class Estudiante extends Persona {
-    constructor(nombre, edad, calificacion) {
+    constructor(nombre, edad, calificacion = 0) {
       super(nombre, edad);
       this.calificacion = calificacion;
     }
@@ -97,10 +97,8 @@
     }
   }
 
-  const estudiante1 = new Estudiante("Erika", 28, 10);
+  const estudiante1 = new Estudiante("Erika", 28);
   estudiante1.obtDetalles();
-  const estudiante2 = new Estudiante("Ramiro", 15, 9);
-  const estudiante3 = new Estudiante("Maria", 22, 6);
 
   //5.3
   class Profesor extends Persona {
@@ -140,20 +138,66 @@
     }
 
     calcPromedio() {
+      this.calificar();
       let contador = 0;
       let sum = 0;
       for (let j = 0; j < this.estudiantes.length; j++) {
         sum = sum + this.estudiantes[j].calificacion;
-        contador = j;
+        contador = j + 1;
       }
       this.promedio = sum / contador;
       console.log(this.promedio);
     }
+
+    obtenerDetalles() {
+      this.calcPromedio();
+      console.log(`Detalles del Profesor:`);
+      for (const detalle of Object.keys(this.profesor)) {
+        console.log(`${detalle}: ${this.profesor[detalle]}`);
+      }
+
+      console.log("Detalles de los Estudiantes");
+      for (const detail of Object.keys(this.estudiantes)) {
+        for (const propiedad of Object.keys(this.estudiantes[detail])) {
+          console.log(`${propiedad} ${this.estudiantes[detail][propiedad]}`);
+        }
+      }
+
+      console.log(`PROMEDIO GENERAL DEL GRUPO: ${this.promedio}`);
+    }
   }
 
-  const arrayEstudiantes = [estudiante1, estudiante2, estudiante3];
+  //5.5
+
+  const estudiante2 = new Estudiante("Jose", 15);
+  const estudiante3 = new Estudiante("Wilfrido", 22);
+  const estudiante4 = new Estudiante("Griselda", 40);
+  const estudiante5 = new Estudiante("Erick", 26);
+  const estudiante6 = new Estudiante("Ingrid", 22);
+
+  const arrayEstudiantes = [
+    estudiante1,
+    estudiante2,
+    estudiante3,
+    estudiante4,
+    estudiante5,
+    estudiante6,
+  ];
 
   const grupo1 = new Grupo(profesor1, arrayEstudiantes);
-  grupo1.calificar();
-  grupo1.calcPromedio();
+  grupo1.obtenerDetalles();
+
+  // BONUS
+  // Todas las combinaciones con letras de un string, maximo 3
+
+  let string = "luzcdfs";
+
+  function combinacionesString(string) {
+    let cad = string;
+    if (string.length > 3) {
+      cad = string.slice(0, 3);
+    }
+  }
+
+  combinacionesString(string);
 </script>
