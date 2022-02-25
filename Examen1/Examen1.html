@@ -69,6 +69,7 @@
   console.log(palindromo(cadena));
 
   //5
+  //5.1
   class Persona {
     nombre;
     edad;
@@ -85,6 +86,7 @@
   const persona1 = new Persona("Juan", 32);
   persona1.obtDetalles();
 
+  //5.2
   class Estudiante extends Persona {
     constructor(nombre, edad, calificacion) {
       super(nombre, edad);
@@ -100,6 +102,7 @@
   const estudiante2 = new Estudiante("Ramiro", 15, 9);
   const estudiante3 = new Estudiante("Maria", 22, 6);
 
+  //5.3
   class Profesor extends Persona {
     constructor(nombre, edad, asignatura = "JS", nivel = "Basico") {
       super(nombre, edad);
@@ -118,27 +121,39 @@
   const profesor2 = new Profesor("Hugo", 32, "Java", "Senior");
   profesor2.obtDetalles();
 
+  //5.4
   class Grupo {
     profesor = {};
     promedio;
     estudiantes = [];
 
-    constructor(profesor, promedio = 0, estudiantes) {
+    constructor(profesor, estudiantes) {
       this.profesor = profesor;
       this.estudiantes = estudiantes;
-      this.promedio = promedio;
     }
 
-    calificar(estudiantes) {
-      for (let i = 0; i < estudiantes.length; i++) {
-        estudiantes[i].calificacion = 2;
-        console.log(estudiantes[i].calificacion);
+    calificar() {
+      for (let i = 0; i < this.estudiantes.length; i++) {
+        this.estudiantes[i].calificacion = Math.random() * 10;
+        console.log(this.estudiantes[i].calificacion);
       }
+    }
+
+    calcPromedio() {
+      let contador = 0;
+      let sum = 0;
+      for (let j = 0; j < this.estudiantes.length; j++) {
+        sum = sum + this.estudiantes[j].calificacion;
+        contador = j;
+      }
+      this.promedio = sum / contador;
+      console.log(this.promedio);
     }
   }
 
   const arrayEstudiantes = [estudiante1, estudiante2, estudiante3];
 
-  const grupo1 = new Grupo(profesor1, 0, arrayEstudiantes);
+  const grupo1 = new Grupo(profesor1, arrayEstudiantes);
   grupo1.calificar();
+  grupo1.calcPromedio();
 </script>
