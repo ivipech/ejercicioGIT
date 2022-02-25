@@ -190,13 +190,34 @@
   // BONUS
   // Todas las combinaciones con letras de un string, maximo 3
 
-  let string = "luzcdfs";
+  let string = "luz";
 
   function combinacionesString(string) {
     let cad = string;
     if (string.length > 3) {
       cad = string.slice(0, 3);
     }
+
+    for (let i = 0; i < 3; i++) {
+      imprimirCadena(i, cad);
+    }
+  }
+
+  function imprimirCadena(indiceInicial, cad) {
+    let str = cad[indiceInicial];
+    let str2 = cad[indiceInicial];
+
+    for (let i = 0; i < 3; i++) {
+      if (i === indiceInicial) continue;
+      str = str + cad[i];
+    }
+    for (let i = 2; i >= 0; i--) {
+      if (i === indiceInicial) continue;
+      str2 = str2 + cad[i];
+    }
+
+    console.log(str);
+    console.log(str2);
   }
 
   combinacionesString(string);
