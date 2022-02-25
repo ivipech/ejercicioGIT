@@ -1,3 +1,144 @@
 <script>
-  console.log("Hola Mundo");
+  var numero1 = 5;
+  var numero2 = 8;
+
+  //1.1
+  if (!(numero1 > numero2)) {
+    console.log("Numero1 no es mayor que numero2");
+  }
+
+  //1.2
+  if (Math.sign(numero2) === 1 || 0) {
+    console.log("Numero 2 es positivo");
+  }
+
+  //1.3
+  if (Math.sign(numero1) === -1 || Math.sign(numero1) !== 0) {
+    console.log("Numero1 es negativo o distinto de 0");
+  }
+
+  //1.4
+  if (!(numero1 + 1 >= numero2)) {
+    console.log(
+      "Incrementar en una unidad el valor de numero1 no lo hace mayor o igual que numero2"
+    );
+  }
+
+  //2 El factorial de un numero entero n es una operacion matematica que consiste en multiplicar
+  // n * (n-1) * (n-2). A si el factorial de 5 escrito 5! es 5 * 4 * 3 * 2 * 1
+
+  function numFactorial(x) {
+    let factorial = 1;
+    for (let i = x; i > 0; i--) {
+      factorial = factorial * i;
+    }
+    return factorial;
+  }
+
+  console.log(numFactorial(5));
+  console.log(numFactorial(4));
+
+  //3 Funcion que recibe un numero y devuelve si es par o impar
+
+  function parOImpar(num) {
+    return num % 2 == 0
+      ? "El numero ingresado es par"
+      : "El numero ingresado es impar";
+  }
+
+  console.log(parOImpar(7));
+
+  //4 Funcion que determine si la cadena de texto es un palindromo complejo
+
+  const cadena = "La ruta nos aporto otro paso natural";
+
+  function palindromo(cadena) {
+    let cadena1 = cadena.replaceAll(" ", "");
+    cadena1 = cadena1.toUpperCase();
+
+    for (i = 0; i < cadena1.length / 2; i++) {
+      primerNum = cadena1[i];
+      ultiNum = cadena1[cadena1.length - 1 - i];
+      if (primerNum !== ultiNum) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  console.log(palindromo(cadena));
+
+  //5
+  class Persona {
+    nombre;
+    edad;
+    constructor(nombre, edad) {
+      this.nombre = nombre;
+      this.edad = edad;
+    }
+
+    obtDetalles() {
+      console.log(this.nombre, this.edad);
+    }
+  }
+
+  const persona1 = new Persona("Juan", 32);
+  persona1.obtDetalles();
+
+  class Estudiante extends Persona {
+    constructor(nombre, edad, calificacion) {
+      super(nombre, edad);
+      this.calificacion = calificacion;
+    }
+    obtDetalles() {
+      console.log(this.nombre, this.edad, this.calificacion);
+    }
+  }
+
+  const estudiante1 = new Estudiante("Erika", 28, 10);
+  estudiante1.obtDetalles();
+  const estudiante2 = new Estudiante("Ramiro", 15, 9);
+  const estudiante3 = new Estudiante("Maria", 22, 6);
+
+  class Profesor extends Persona {
+    constructor(nombre, edad, asignatura = "JS", nivel = "Basico") {
+      super(nombre, edad);
+      this.asignatura = asignatura;
+      this.nivel = nivel;
+    }
+
+    obtDetalles() {
+      console.log(this.nombre, this.edad, this.asignatura, this.nivel);
+    }
+  }
+
+  const profesor1 = new Profesor("Victor", 32);
+  profesor1.obtDetalles();
+
+  const profesor2 = new Profesor("Hugo", 32, "Java", "Senior");
+  profesor2.obtDetalles();
+
+  class Grupo {
+    profesor = {};
+    promedio;
+    estudiantes = [];
+
+    constructor(profesor, promedio = 0, estudiantes) {
+      this.profesor = profesor;
+      this.estudiantes = estudiantes;
+      this.promedio = promedio;
+    }
+
+    calificar(estudiantes) {
+      for (let i = 0; i < estudiantes.length; i++) {
+        estudiantes[i].calificacion = 2;
+        console.log(estudiantes[i].calificacion);
+      }
+    }
+  }
+
+  const arrayEstudiantes = [estudiante1, estudiante2, estudiante3];
+
+  const grupo1 = new Grupo(profesor1, 0, arrayEstudiantes);
+  grupo1.calificar();
 </script>
