@@ -14,6 +14,10 @@
   overflow: auto;
 }
 
+p:first-child {
+  background-color: aqua;
+}
+
 div.selectores {
   height: auto;
   width: auto;
@@ -41,4 +45,15 @@ div.selectores {
 #caja3 {
   width: 80vw;
   background: cyan;
+}
+
+p.unidades {
+  font-size: 20px;
+}
+
+div.unidades {
+  font-size: 1rem;
+}
+p.parrafo2 {
+  font-size: 2rem;
 }
