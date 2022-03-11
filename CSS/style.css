@@ -69,3 +69,28 @@ h3 {
 h3 {
   background-color: yellow !important;
 }
+
+.Display {
+  background-color: aquamarine;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#d1 {
+  display: block;
+}
+
+#d2,
+#d4 {
+  display: inline;
+}
+
+#d3 {
+  display: none;
+}
+
+#d5 {
+  display: inline-block;
+}
