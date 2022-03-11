@@ -33,7 +33,7 @@ div.selectores {
 }
 
 #caja2 {
-  width: 100vw;
+  width: 100vh;
 }
 
 #cajacontenedora,
@@ -43,7 +43,7 @@ div.selectores {
 }
 
 #caja3 {
-  width: 80vw;
+  width: 80vh;
   background: cyan;
 }
 
@@ -56,4 +56,16 @@ div.unidades {
 }
 p.parrafo2 {
   font-size: 2rem;
+}
+
+h3#titulo1 {
+  background-color: green;
+}
+
+h3 {
+  background-color: red;
+}
+
+h3 {
+  background-color: yellow !important;
 }
