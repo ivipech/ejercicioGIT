@@ -2,8 +2,28 @@
   font-size: 30px;
   color: rgb(250, 251, 252);
   background-color: rgb(37, 70, 70);
+  position: sticky;
 }
 
+.Titulos.selectores {
+  top: 0px;
+  bottom: 10px;
+}
+
+.Titulos.unidades {
+  top: 0px;
+  bottom: -55px;
+}
+
+.Titulos.jerarquia {
+  top: 0px;
+  bottom: -100px;
+}
+
+.Titulos.display {
+  top: 0px;
+  bottom: -103px;
+}
 .box {
   width: 150px;
   height: 100px;
@@ -11,7 +31,6 @@
   padding: 10px;
   border: 5px solid black;
   background-color: rgb(66, 112, 97);
-  overflow: auto;
 }
 
 p:first-child {
@@ -93,4 +112,29 @@ h3 {
 
 #d5 {
   display: inline-block;
+}
+
+.padre {
+  border: 2px solid rgb(69, 236, 236);
+  color: rgb(69, 236, 236);
+  padding: 20px;
+}
+
+.position.static,
+.position.relativo,
+.position.absoluto {
+  top: 20px;
+  background-color: grey;
+}
+
+.relativo {
+  position: relative;
+  top: 20px;
+  left: 100px;
+}
+
+.absoluto {
+  position: absolute;
+  top: 100px;
+  left: 100px;
 }
