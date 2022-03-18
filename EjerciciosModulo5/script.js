@@ -77,8 +77,23 @@ const nota3 = parseInt(prompt("Ingrese nota 3"));
 let media = nota1 + nota2 + nota3;
 media = media / 3;
 
-if (media < 7) {
-  alert("Promocionado ✅");
+if (media > 7) {
+  alert(`Promedio ${media}: Promocionado ✅`);
 } else {
-  alert("No promocionado❌");
+  alert(`Pormedio ${media}: No promocionado❌`);
 }
+
+//Leccion 6 Ciclos > Programa tabla hasta el 50
+
+const numTabla = parseInt(prompt("Dame un numero para multiplicar"));
+
+function tabla50(num) {
+  let j = 1;
+
+  while (j < 51) {
+    console.log(`${j} x ${num} = ${j * num}`);
+    j++;
+  }
+}
+
+tabla50(numTabla);
