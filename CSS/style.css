@@ -22,7 +22,11 @@
 
 .Titulos.display {
   top: 0px;
-  bottom: -103px;
+  bottom: -190x;
+}
+.Titulos.flex {
+  top: 0px;
+  bottom: -103;
 }
 
 .box {
@@ -138,4 +142,45 @@ h3 {
   position: absolute;
   top: 100px;
   left: 100px;
+}
+
+#cflex1,
+#cflex11 {
+  background-color: rgb(83, 169, 240);
+}
+
+#cflex2,
+#cflex12 {
+  background-color: rgb(73, 212, 103);
+}
+#cflex3,
+#cflex13 {
+  background-color: rgb(233, 168, 233);
+}
+#cflex4,
+#cflex14 {
+  background-color: rgb(221, 70, 50);
+}
+#cflex5,
+#cflex15 {
+  background-color: rgb(212, 189, 54);
+}
+
+.hijos {
+  margin: 5px;
+  border: black 1px solid;
+}
+
+#padre {
+  border: black 2px solid;
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 10px;
+}
+
+#padre2 {
+  background-color: rgb(175, 172, 172);
+  border: black 2px solid;
+  display: flex;
+  flex-wrap: wrap;
 }
