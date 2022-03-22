@@ -40,6 +40,11 @@
   bottom: -193px;
 }
 
+.Titulos.Grid2 {
+  top: 0px;
+  bottom: -200px;
+}
+
 .box {
   width: 150px;
   height: 100px;
@@ -101,8 +106,8 @@ h3 {
   background-color: red;
 }
 
-h3 {
-  background-color: yellow !important;
+h3.subtitulos {
+  background-color: aquamarine;
 }
 
 .Display {
@@ -255,4 +260,134 @@ h3 {
 .Grid.hijos.footer {
   background-color: rgb(82, 149, 204);
   grid-area: footer;
+}
+
+/*GRID 2*/
+
+.Grid2.Padre {
+  background-color: rgb(184, 181, 181);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 20px 60px;
+}
+
+.Grid2.hijos {
+  height: 100px;
+  width: auto;
+  margin: 0px;
+  border: black 1px solid;
+}
+
+.Grid2.hijos.c1 {
+  background-color: rgb(240, 72, 72);
+}
+.Grid2.hijos.c2 {
+  background-color: rgb(224, 224, 93);
+}
+.Grid2.hijos.c3 {
+  background-color: rgb(127, 224, 127);
+}
+.Grid2.hijos.c4 {
+  background-color: rgb(82, 149, 204);
+}
+.Grid2.hijos.c5 {
+  background-color: rgb(190, 133, 197);
+}
+
+.Grid2.Padre2 {
+  background-color: rgb(184, 181, 181);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.Grid2.hijos2 {
+  height: 100px;
+  min-width: 100px;
+  margin: 0px;
+  border: black 1px solid;
+}
+
+.Grid2.hijos2.c11 {
+  background-color: rgb(240, 72, 72);
+}
+.Grid2.hijos2.c12 {
+  background-color: rgb(224, 224, 93);
+}
+.Grid2.hijos2.c13 {
+  background-color: rgb(127, 224, 127);
+}
+.Grid2.hijos2.c14 {
+  background-color: rgb(82, 149, 204);
+}
+.Grid2.hijos2.c15 {
+  background-color: rgb(190, 133, 197);
+}
+
+.Grid2.Padre3 {
+  background-color: rgb(184, 181, 181);
+  margin: 5px;
+  display: inline-grid;
+  grid-template-columns: 200px 200px 200px;
+  justify-items: center;
+  height: 500px;
+  width: 600px;
+  justify-content: space-around;
+}
+
+.Grid2.hijos3 {
+  height: 100px;
+  width: 150px;
+  margin: 0px;
+  border: black 1px solid;
+}
+
+.Grid2.hijos3.c1 {
+  background-color: rgb(240, 72, 72);
+}
+.Grid2.hijos3.c2 {
+  background-color: rgb(224, 224, 93);
+}
+.Grid2.hijos3.c3 {
+  background-color: rgb(127, 224, 127);
+}
+.Grid2.hijos3.c4 {
+  background-color: rgb(82, 149, 204);
+}
+.Grid2.hijos3.c5 {
+  background-color: rgb(190, 133, 197);
+}
+
+.Grid2.Padre4 {
+  background-color: rgb(184, 181, 181);
+  margin: 5px;
+  display: inline-grid;
+  grid-template-columns: 200px 200px 200px;
+  justify-items: stretch;
+  height: 500px;
+  width: 600px;
+  justify-content: space-evenly;
+}
+
+.Grid2.hijos4 {
+  height: 100px;
+  width: 150px;
+  margin: 0px;
+  border: black 1px solid;
+}
+
+.Grid2.hijos4.c1 {
+  background-color: rgb(240, 72, 72);
+}
+.Grid2.hijos4.c2 {
+  background-color: rgb(224, 224, 93);
+}
+.Grid2.hijos4.c3 {
+  background-color: rgb(127, 224, 127);
+}
+.Grid2.hijos4.c4 {
+  background-color: rgb(82, 149, 204);
+}
+.Grid2.hijos4.c5 {
+  background-color: rgb(190, 133, 197);
 }
