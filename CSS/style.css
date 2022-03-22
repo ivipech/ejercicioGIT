@@ -22,11 +22,22 @@
 
 .Titulos.display {
   top: 0px;
-  bottom: -190x;
+  bottom: -180px;
 }
+
+.Titulos.position {
+  top: 0px;
+  bottom: -185px;
+}
+
 .Titulos.flex {
   top: 0px;
-  bottom: -103;
+  bottom: -193px;
+}
+
+.Titulos.Grid {
+  top: 0px;
+  bottom: -193px;
 }
 
 .box {
@@ -187,7 +198,8 @@ h3 {
 /*GRID*/
 
 .Grid.hijos {
-  height: 100px;
+  min-height: 100px;
+  max-height: 200px;
   width: auto;
   border: black 1px solid;
 }
@@ -195,6 +207,8 @@ h3 {
 .Grid.Padre {
   background-color: rgb(184, 181, 181);
   display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr auto;
 }
 
 .Grid.hijos.c1 {
@@ -210,5 +224,35 @@ h3 {
   background-color: rgb(82, 149, 204);
 }
 .Grid.hijos.c5 {
-  background-color: rgb(216, 138, 223);
+  background-color: rgb(190, 133, 197);
+}
+
+.Grid.Padre.areas {
+  background-color: rgb(142, 80, 167);
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, minmax(100px, 200px));
+
+  grid-template-areas:
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+}
+
+.Grid.hijos.header {
+  background-color: rgb(240, 72, 72);
+  grid-area: header;
+}
+.Grid.hijos.main {
+  background-color: rgb(224, 224, 93);
+  grid-area: main;
+}
+.Grid.hijos.sidebar {
+  background-color: rgb(127, 224, 127);
+  grid-area: sidebar;
+}
+.Grid.hijos.footer {
+  background-color: rgb(82, 149, 204);
+  grid-area: footer;
 }
