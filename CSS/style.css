@@ -56,6 +56,7 @@
 
 .Titulos.Animaciones {
   top: 0px;
+  z-index: 1;
 }
 
 .box {
@@ -511,21 +512,102 @@ h3.subtitulos {
 
 .Animaciones.cuadro {
   animation: caida 2s linear 1ms 2;
-  @keyframes caida {
-    -webkit-from {
-      top: 0px;
-      background-color: yellow;
-    }
-    -webkit-to {
-      top: 200px;
-    }
+}
+
+@keyframes caida {
+  from {
+    top: 0px;
+    background-color: yellow;
   }
+  to {
+    top: 200px;
+  }
+}
+
+.contenedor.padre {
+  border: black 1px solid;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .Animaciones.cuadro {
   height: 200px;
   width: 200px;
   background-color: brown;
-  position: absolute;
-  overflow: hidden;
+  position: relative;
+}
+
+.Animaciones.contenedorh {
+  color: black;
+  display: block;
+  margin: 3px;
+  animation: colordeFondo;
+  animation-duration: 5s;
+}
+
+@keyframes colordeFondo {
+  from {
+    background-color: aliceblue;
+    width: 100px;
+  }
+  to {
+    background-color: brown;
+    width: 250px;
+    color: aliceblue;
+  }
+}
+
+#ease {
+  animation-timing-function: ease;
+}
+#easein {
+  animation-timing-function: ease-in;
+}
+#easeinout {
+  animation-timing-function: ease-in-out;
+}
+#easeout {
+  animation-timing-function: ease-out;
+}
+#linear {
+  animation-timing-function: linear;
+}
+#cb {
+  animation-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
+}
+
+.Animaciones.contenedor2 {
+  color: black;
+  display: block;
+  margin: 3px;
+  grid-column: 2;
+}
+
+.Animaciones.contenedorh2 {
+  color: black;
+  display: block;
+  border: black 1px solid;
+  margin: 8px;
+  animation: colorFondoCom;
+  animation-duration: 10s;
+}
+
+@keyframes colorFondoCom {
+  0% {
+    width: 80px;
+    background-color: rgb(226, 93, 93);
+  }
+  25% {
+    width: 130px;
+    background-color: rgb(77, 159, 214);
+  }
+  50% {
+    width: 230px;
+    background-color: rgb(223, 238, 93);
+  }
+  100% {
+    width: 430px;
+    background-color: rgb(178, 93, 218);
+  }
 }
