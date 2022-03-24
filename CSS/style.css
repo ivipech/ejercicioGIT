@@ -45,6 +45,15 @@
   bottom: -200px;
 }
 
+.Titulos.Grid3 {
+  top: 0px;
+  bottom: -220px;
+}
+
+.Titulos.Media {
+  top: 0%;
+}
+
 .box {
   width: 150px;
   height: 100px;
@@ -390,4 +399,97 @@ h3.subtitulos {
 }
 .Grid2.hijos4.c5 {
   background-color: rgb(190, 133, 197);
+}
+
+/* GRID 3*/
+
+.Grid3.Padre {
+  background-color: rgb(184, 181, 181);
+  margin: 5px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+}
+
+.Grid3.hijos {
+  height: 100px;
+  width: 100px;
+  margin: 0px;
+  border: black 1px solid;
+}
+
+.Grid3.hijos.c1 {
+  background-color: rgb(240, 72, 72);
+  justify-self: start;
+  align-self: end;
+}
+.Grid3.hijos.c2 {
+  background-color: rgb(224, 224, 93);
+  justify-self: end;
+  align-self: center;
+}
+.Grid3.hijos.c3 {
+  background-color: rgb(127, 224, 127);
+  justify-self: center;
+  align-self: center;
+}
+.Grid3.hijos.c4 {
+  background-color: rgb(82, 149, 204);
+  grid-column: 3;
+}
+.Grid3.hijos.c5 {
+  background-color: rgb(190, 133, 197);
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/*MEDIA QUERY*/
+
+.Media.Padre {
+  background-color: rgb(184, 181, 181);
+  margin: 5px;
+  height: 600px;
+  display: inline-grid;
+  grid-template-columns: 200px 200px 200px;
+  justify-items: stretch;
+  height: 700px;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.Media.hijos {
+  height: 100px;
+  width: 500px;
+  margin: 0px;
+  border: black 1px solid;
+}
+
+.Media.hijos.c1 {
+  background-color: rgb(240, 72, 72);
+}
+.Media.hijos.c2 {
+  background-color: rgb(224, 224, 93);
+}
+.Media.hijos.c3 {
+  background-color: rgb(127, 224, 127);
+}
+.Media.hijos.c4 {
+  background-color: rgb(82, 149, 204);
+}
+.Media.hijos.c5 {
+  background-color: rgb(190, 133, 197);
+}
+
+@media only screen and (min-width: 251px) and (max-width: 599px) {
+  .Media.hijos.c1,
+  .Media.hijos.c2,
+  .Media.hijos.c3,
+  .Media.hijos.c4,
+  .Media.hijos.c5 {
+    background-color: aliceblue;
+    width: 50px;
+    margin: 0px;
+    border: black 1px solid;
+  }
 }
