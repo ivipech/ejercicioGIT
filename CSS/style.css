@@ -54,6 +54,10 @@
   top: 0%;
 }
 
+.Titulos.Animaciones {
+  top: 0px;
+}
+
 .box {
   width: 150px;
   height: 100px;
@@ -492,4 +496,36 @@ h3.subtitulos {
     margin: 0px;
     border: black 1px solid;
   }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+  .Media.hijos.media {
+    background-color: rgb(19, 20, 20);
+    width: 100px;
+    margin: 0px;
+    border: black 1px solid;
+  }
+}
+
+/*Animaciones*/
+
+.Animaciones.cuadro {
+  animation: caida 2s linear 1ms 2;
+  @keyframes caida {
+    -webkit-from {
+      top: 0px;
+      background-color: yellow;
+    }
+    -webkit-to {
+      top: 200px;
+    }
+  }
+}
+
+.Animaciones.cuadro {
+  height: 200px;
+  width: 200px;
+  background-color: brown;
+  position: absolute;
+  overflow: hidden;
 }
